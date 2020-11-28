@@ -61,7 +61,8 @@ public class Kata2 {
         
         //KATA 2 VERSION 1
         
-        Integer[] data = {1, 8, 4, 9, 0, 6, 2, 3, 1, 1, 4, 6, 5, 8, 9};
+        //Integer[] data = {1, 8, 4, 9, 0, 6, 2, 3, 1, 1, 4, 6, 5, 8, 9};
+        String[] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
         
         //Map<Integer, Integer> histogram = new HashMap<> ();
         //
@@ -94,13 +95,13 @@ public class Kata2 {
         //    System.out.println(entry.getKey() + "==>" + entry.getValue());
         //}
         
-        //KATA 2 VERSION 3 y 4
+        //KATA 2 VERSION 3, 4 y 5
         
         Histogram histo = new Histogram(data);
         
-        Map<Integer, Integer> histogr = histo.getHistogram();
+        Map<String, Integer> histogr = histo.getHistogram();
         
-        for (Integer key : histogr.keySet()) {
+        for (String key : histogr.keySet()) {
             System.out.println(key + " ==> " + histogr.get(key));
         }
         
