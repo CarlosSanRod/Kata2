@@ -63,7 +63,7 @@ public class Kata2 {
         
         int data[] = {1, 8, 4, 9, 0, 6, 2, 3, 1, 1, 4, 6, 5, 8, 9};
         
-        Map<Integer, Integer> histogram = new HashMap<> ();
+        //Map<Integer, Integer> histogram = new HashMap<> ();
         //
         //for (int i = 0; i < data.length; i++) {
         //    if(histogram.containsKey(data[i])) {
@@ -83,15 +83,25 @@ public class Kata2 {
         
         //KATA VERSION 2   
         
-        for (int key : data) {
-            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-        }
+        //for (int key : data) {
+        //    histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
+        //}
+        //
+        //Iterator<Map.Entry<Integer, Integer>> iter = histogram.entrySet().iterator();
+        //
+        //while(iter.hasNext()) {
+        //    Map.Entry<Integer, Integer> entry = iter.next();
+        //    System.out.println(entry.getKey() + "==>" + entry.getValue());
+        //}
         
-        Iterator<Map.Entry<Integer, Integer>> iter = histogram.entrySet().iterator();
+        //KATA 2 VERSION 3
         
-        while(iter.hasNext()) {
-            Map.Entry<Integer, Integer> entry = iter.next();
-            System.out.println(entry.getKey() + "==>" + entry.getValue());
+        Histogram histo = new Histogram(data);
+        
+        Map<Integer, Integer> histogr = histo.getHistogram();
+        
+        for (Integer key : histogr.keySet()) {
+            System.out.println(key + " ==> " + histogr.get(key));
         }
         
     }
